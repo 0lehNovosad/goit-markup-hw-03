@@ -183,3 +183,10 @@ a {
   background-color: #2e2f42;
 }
 
+.container { 
+max-width: 999%;
+padding: left 100px;  
+padding: right 10px;
+margin: left 10px;
+margin: right 10px;  
+}
