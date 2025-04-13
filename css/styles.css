@@ -25,7 +25,33 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  text-align: center;
+  margin-right: 90%;
 }
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  padding: 24px 0;
+  margin-right: 76px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
 
 .header-logo .logo-part {
   font-weight: 500;
@@ -33,6 +59,8 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  text-align: center;
+  margin-right: 80%;
 }
 
 .footer-logo .logo-part {
@@ -47,6 +75,14 @@ a {
   color: #2e2f42;
 }
 
+.nav-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .contacts {
   font-style: normal;
 }
@@ -58,6 +94,13 @@ a {
   color: #434455;
 }
 
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
 .contacts-link:hover,
 .contacts-link:focus,
 .nav-link:hover,
@@ -67,6 +110,18 @@ a {
 
 .title {
   background-color: #2e2f42;
+  width: 1920px;
+  height: 600px;
+  padding: 188px 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+
+  /* line-height: 60px; */
+  line-height: 1.07143;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
 }
 
 .title-text {
@@ -76,9 +131,16 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  align-items: center;
 }
 
 .title-button {
+  display: block;
+  min-width: 169px;
+  margin: 0 auto 48px auto;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
   font-weight: 500;
   font-size: 16px;
@@ -183,10 +245,34 @@ a {
   background-color: #2e2f42;
 }
 
-.container { 
-max-width: 999%;
-padding: left 100px;  
-padding: right 10px;
-margin: left 10px;
-margin: right 10px;  
+.main-title {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
+.main-content-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+.main-item {
+  text-align: center;
+}
+.main-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.main-item {
+  flex-basis: calc((100% - 3 * 24px) / 4);
+  text-align: center;
 }
