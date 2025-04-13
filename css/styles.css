@@ -1,11 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: 2%;
   background-color: #ffffff;
   color: #434455;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 ul,
@@ -15,8 +35,53 @@ ol {
   padding: 0;
 }
 
+img {
+  display: block;
+}
+
 a {
   text-decoration: none;
+}
+
+
+
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+
+
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  padding: 24px 0;
+  margin-right: 76px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.contacts-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .logo {
@@ -27,50 +92,10 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  text-align: center;
-  margin-right: 90%;
-}
-
-.page-header {
-  border-bottom: 1px solid #e7e9fc;
-}
-
-.header-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-.container {
-  max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.header-logo {
-  padding: 24px 0;
-  margin-right: 76px;
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
 }
 
 .header-logo .logo-part {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
   color: #2e2f42;
-  text-align: center;
-  margin-right: 80%;
-}
-
-.footer-logo {
-  display: inline-block;
-  margin-bottom: 16px;
 }
 
 .nav-link {
@@ -79,32 +104,22 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
-}
-
-.nav-list {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  padding: 24px 0;
+  display: block;
 }
 
 .contacts {
   font-style: normal;
+  margin-left: auto;
 }
 
 .contacts-link {
+  display: block;
+  padding: 24px 0;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-}
-
-.contacts-list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 5px;
 }
 
 .contacts-link:hover,
@@ -114,30 +129,51 @@ a {
   color: #404bbf;
 }
 
-.title {
-  background-color: #2e2f42;
-  width: 1920px;
-  height: 600px;
-  padding: 188px 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 56px;
 
-  /* line-height: 60px; */
-  line-height: 1.07143;
-  letter-spacing: 0.02em;
+
+.title {
+  padding: 188px 0;
+  background-color: #2e2f42;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main-content {
+  padding: 120px 0;
+}
+
+.main-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.main-item {
+  flex-basis: calc((100% - 3 * 24px) / 4);
   text-align: center;
-  color: #fff;
 }
 
 .title-text {
+  max-width: 496px;
+  margin: 0 auto 48px auto;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-  align-items: center;
 }
 
 .title-button {
@@ -162,6 +198,7 @@ a {
 }
 
 .main-title {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -177,9 +214,10 @@ a {
   color: #434455;
 }
 
+
 .our-team {
-  background-color: #f4f4fd;
   padding: 120px 0;
+  background-color: #f4f4fd;
 }
 
 .team-title-first {
@@ -195,7 +233,7 @@ a {
 
 .team-list {
   display: flex;
-  gap: 4px;
+  gap: 24px;
 }
 
 .team-title {
@@ -208,35 +246,30 @@ a {
   margin-bottom: 8px;
 }
 
-.team-text {
+.portfolio-list {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 8px;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 
-.team-item {
-  background-color: #ffffff;
-  margin: 0 auto;
-  border-radius: 0px 0px 4px 4px;
-  width: 264px;
-  height: 380px;
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 32px;
+.desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  max-width: 264px;
+  color: #f4f4fd;
 }
 
-.workers {
-  padding: 32px 0;
+.portfolio-item {
+  width: calc((100% - 48px) / 3);
 }
 
-.all-portfolio {
-  padding-top: 120px;
-  padding-bottom: 120px;
+.container-port {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 .portfolio-title {
@@ -260,14 +293,6 @@ a {
   margin-bottom: 8px;
 }
 
-.portfolio-Descriptionc {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-}
-
 .portfolio-work-desc {
   font-weight: 400;
   font-size: 16px;
@@ -276,69 +301,41 @@ a {
   color: #434455;
 }
 
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
-}
-
-.portfolio-item {
-  width: calc((100% - 48px) / 3);
-}
-
-.container-port {
-  padding: 32px 16px;
-  border: 1px solid #e7e9fc;
-  border-top: none;
-}
-
-.description {
+.team-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  max-width: 264px;
-  color: #f4f4fd;
-}
-
-.footer {
-  background-color: #2e2f42;
-}
-
-.main-title {
-  margin-bottom: 8px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-}
-
-.main-content-title {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  text-align: center;
   color: #434455;
 }
 
-.main-item {
-  text-align: center;
-}
-.main-list {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 24px;
+.team-item {
+  flex-basis: calc((100% - 72px) / 4);
+  border-radius: 0px 0px 4px 4px;
+  width: 264px;
+  height: 380px;
+  background-color: #ffffff;
 }
 
-.main-item {
-  flex-basis: calc((100% - 3 * 24px) / 4);
-  text-align: center;
+
+.container-workers {
+  padding: 32px 0;
 }
 
-.footer {
+
+.our-portfolio {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.page-footer {
   padding: 100px 0;
   background-color: #2e2f42;
 }
