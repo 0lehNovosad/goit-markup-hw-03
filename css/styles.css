@@ -8,9 +8,10 @@ body {
   color: #434455;
 }
 
-ul,
-ol {
+ul,ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -27,6 +28,10 @@ a {
   color: #4d5ae5;
   text-align: center;
   margin-right: 90%;
+}
+
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
 }
 
 .header-nav {
@@ -52,7 +57,6 @@ a {
   align-items: center;
 }
 
-
 .header-logo .logo-part {
   font-weight: 500;
   font-size: 20px;
@@ -63,8 +67,9 @@ a {
   margin-right: 80%;
 }
 
-.footer-logo .logo-part {
-  color: #f4f4fd;
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .nav-link {
@@ -173,9 +178,11 @@ a {
 
 .our-team {
   background-color: #f4f4fd;
+  padding: 120px 0;
 }
 
 .team-title-first {
+  margin-bottom: 72px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -183,6 +190,11 @@ a {
   text-align: center;
   text-transform: capitalize;
   color: #2e2f42;
+}
+
+.team-list {
+  display: flex;
+  gap: 4px;
 }
 
 .team-title {
@@ -192,19 +204,33 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .team-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #434455;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .team-item {
   background-color: #ffffff;
+  margin: 0 auto;
+  border-radius: 0px 0px 4px 4px;
+  width: 264px;
+  height: 380px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.workers {
+  padding: 32px 0;
 }
 
 .portfolio-title {
@@ -214,15 +240,18 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
+  margin-bottom: 72px;
   color: #2e2f42;
 }
 
 .portfolio-work {
+  margin-bottom: 72px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .portfolio-Descriptionc {
@@ -238,6 +267,7 @@ a {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  max-width: 264px;
   color: #f4f4fd;
 }
 
@@ -275,4 +305,9 @@ a {
 .main-item {
   flex-basis: calc((100% - 3 * 24px) / 4);
   text-align: center;
+}
+
+.footer {
+  padding: 100px 0;
+  background-color: #2e2f42;
 }
